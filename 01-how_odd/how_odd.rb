@@ -1,3 +1,3 @@
 def how_odd(array)
-  4
+  array.count { |x| x.odd? }
 end
