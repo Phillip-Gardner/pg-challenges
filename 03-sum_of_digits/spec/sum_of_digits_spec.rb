@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/sum_of_digits'
 require 'rspec'
 
@@ -12,5 +14,11 @@ describe '#sum_of_digits' do
     expect(sum_of_digits(5)).to eq(15)
     expect(sum_of_digits(7)).to eq(28)
     expect(sum_of_digits(9)).to eq(45)
+  end
+  it 'should work for specific numbers above 9' do
+    expect(sum_of_digits(10)).to eq(46)
+    expect(sum_of_digits(12)).to eq(51)
+    expect(sum_of_digits(3076)).to eq(44_326)
+    expect(sum_of_digits(159)).to eq(1380)
   end
 end
