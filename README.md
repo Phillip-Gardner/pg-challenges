@@ -1,6 +1,8 @@
 # PG's Challenges
 
-Here is where I am creating my own coding challenges alongside tests for those challenges
+In this repo, I am creating a number of coding challenges, alongside Rspec tests for those challenges.
 
-Check them out!
+The purpose is to work on my testing alongside my Ruby capabilities.
+
+Feel free to check them out
 
