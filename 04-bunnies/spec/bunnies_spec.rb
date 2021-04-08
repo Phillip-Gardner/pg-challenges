@@ -35,4 +35,8 @@ describe Bunny do
     expect(bunny).to respond_to :dead?
     expect(bunny.dead).to eq false
   end
+
+  it 'should have a one_season_passes method' do
+    expect(bunny).to respond_to :one_season_passes
+  end
 end
