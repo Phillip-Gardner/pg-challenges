@@ -45,8 +45,8 @@ describe Bunny do
     expect(bunny.age).to eq 12
   end
 
-  it 'should have a size of xs when less than 3' do
-    2.times { bunny.one_season_passes }
-    expect(bunny.size).to eq 'xs'
+  it 'should have a size of 3 when 3 seasons pass' do
+    3.times { bunny.one_season_passes }
+    expect(bunny.size).to eq 3
   end
 end

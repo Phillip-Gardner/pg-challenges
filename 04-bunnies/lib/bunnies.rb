@@ -16,6 +16,7 @@ class Bunny
   end
 
   def one_season_passes
+    self.size += 1
     self.age += 1
   end
 end
