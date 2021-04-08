@@ -14,4 +14,7 @@ class Bunny
   def dead?
     false
   end
+
+  def one_season_passes
+  end
 end
