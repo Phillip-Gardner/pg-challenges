@@ -39,4 +39,14 @@ describe Bunny do
   it 'should have a one_season_passes method' do
     expect(bunny).to respond_to :one_season_passes
   end
+
+  it 'should age 1 season each season' do
+    12.times { bunny.one_season_passes }
+    expect(bunny.age).to eq 12
+  end
+
+  it 'should have a size of xs when less than 3' do
+    2.times { bunny.one_season_passes }
+    expect(bunny.size).to eq 'xs'
+  end
 end
