@@ -18,12 +18,21 @@ describe Bunny do
     expect(bunny.size).to be_a Integer
   end
 
+  it 'should have 0 size when 0 years old' do
+    expect(bunny.size).to eq 0
+  end
+
+  it 'should have bunnies' do
+    expect(bunny).to respond_to :bunnies
+    expect(bunny.bunnies).to be_a Integer
+  end
+
   it 'should have 0 bunnies when 0 years old' do
     expect(bunny.bunnies).to eq 0
   end
 
   it 'should let us check if its dead or alive' do
-    expect(bunny).to respond_to(:dead?)
-    expect(bunny.dead).to eq(false)
+    expect(bunny).to respond_to :dead?
+    expect(bunny.dead).to eq false
   end
 end
