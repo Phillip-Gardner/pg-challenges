@@ -1,12 +1,21 @@
 # frozen_string_literal: true
 
-def buying_a_car(price_old, price_new, saving_per_month, percent_loss_by_month)
-  months = 0
-  # see if the price_old is greater than price_new
-  unless price_old > price_new do
+def buying_a_car(startpriceold, startpricenew, savingpermonth, percentlossbymonth)
+  month = 1
+  savings = 0
+  percent = 1 - percentlossbymonth.fdiv(100)
+  old_price = startpriceold
+  new_price = startpricenew
 
+  until (old_price + savings) >= new_price
+    savings += savingpermonth
+    percent -= 0.005 if month.even?
+    old_price *= percent
+    new_price *= percent
+    month += 1
   end
-  # check back next month
-  return [months, price_old - price_new]
-  # if it is, return the money left over and the number of months
+  wealth = (savings + old_price)
+  [month - 1, (wealth - new_price).round]
 end
+
+buying_a_car(2000, 8000, 1000, 1.5)
