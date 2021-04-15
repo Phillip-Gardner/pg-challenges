@@ -4,7 +4,7 @@ require_relative '../lib/interview_challenge'
 require 'rspec'
 
 describe 'hello' do
-  it 'should say hello' do
-    expect(hello).to eq 'hello'
+  it 'greets the world' do
+    expect(hello).to eq 'world'
   end
 end
